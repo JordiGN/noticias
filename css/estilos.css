@@ -1,0 +1,56 @@
+@font-face{
+  font-family: "MiFuente";
+  src:url("../fonts/Oswald-Light.ttf");
+}
+h1{
+  color: #1DF5D9;
+}
+body{
+  background-image: url("../img/fondos/psycho.jpg");
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+  text-align:center;
+}
+a{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: bold;
+}
+#cabecera{
+  text-align: center;
+  background-color: yellow;
+  width: 800px;
+  margin: 4px auto ;
+}
+#menu{
+  background-color: red;
+  height: 50px;
+  width: 800px;
+  margin: 4px auto ;
+}
+footer{
+  background-color: purple;
+  height: auto;
+  width: 90%;
+  margin: 4px auto;
+  font-family: "MiFuente";
+}
+
+p{
+  color: white;
+  text-align: justify;
+  font-family: "MiFuente";
+  font-style: bold;
+
+}
+#titulo{
+  font-weight: bold;
+  font-family: "MiFuente";
+  color: gray;
+  font-size: 50px;
+}
+label{
+  color: gray;
+  font-size: 20px;
+}
