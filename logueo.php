@@ -5,7 +5,6 @@ $cta =$_POST['nombre_usuario'];
 $cve =$_POST['clave'];
 
 $sql="SELECT * FROM usuarios WHERE nombre_usuario = '".$cta."' and clave='".$cve."'";
-echo $sql;
 
 $query = mysql_query($sql,$con);
 
@@ -14,15 +13,16 @@ echo "prueba";
 $fila = mysql_fetch_object($query);
 
 
-if ($fila && isset($fila->id_usuario)){
-  include_once("secciones/cabecera.php"); ?>
+if (isset($fila->id_usuario)){
 
-      <section id="entro">
-        <span>Usuario encontrado</span>
-        <a href="index.php">Continuar</a>
-      </section>
+  include_once("secciones/cabecera.php");
 
-      <?php include_once("secciones/pie.php");
+        $_SESSION['logueado']=true;
+        $_SESSION['usuario']=$fila->nombre_usuario;
+        header('location: http://localhost:8080/noticias/principal.php');
+
+     include_once("secciones/pie.php");
+
 
  }else{
 
